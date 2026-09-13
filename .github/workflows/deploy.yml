@@ -175,6 +175,10 @@ jobs:
           # way, icon and word both. Fails the build if the pinned GeoLibre ever
           # moves that markup.
           node ../plugin/scripts/patch-toolbar-logo.mjs
+          # GeoAgent's "use latest model" button names Claude Opus 4.8. This
+          # moves it to Opus 5 and lets Opus 5's thinking blocks survive a tool
+          # call. Fails the build if the pinned maplibre-gl-geoagent changes.
+          node ../plugin/scripts/patch-geoagent-models.mjs
           # The Earth Engine sign-in asks for Google Drive by default, which is
           # a restricted scope, and Google refuses an unverified app that asks
           # for one with a screen carrying no way past it. Nothing here touches
