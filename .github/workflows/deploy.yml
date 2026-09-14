@@ -175,6 +175,11 @@ jobs:
           # way, icon and word both. Fails the build if the pinned GeoLibre ever
           # moves that markup.
           node ../plugin/scripts/patch-toolbar-logo.mjs
+          # GeoLibre's Layers panel shows almost nothing about a layer. This
+          # adds a hover card and a right-click menu listing its folder, kind,
+          # source, copy date, feature count, zoom range and address. Fails
+          # the build if the pinned GeoLibre ever moves that markup.
+          node ../plugin/scripts/patch-layer-info.mjs
           # The Earth Engine sign-in asks for Google Drive by default, which is
           # a restricted scope, and Google refuses an unverified app that asks
           # for one with a screen carrying no way past it. Nothing here touches
